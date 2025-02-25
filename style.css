@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+
+:root {
+  /* Background Color of Webpage */
+  --color-background-page: #efefef;
+  /* JavaScript Reserved Words */
+  --color-page: #131313;
+  /* Words are new in ECMAScript 5 and 6 */
+  --color-es5: #00aaaa;
+  /* Removed Reserved Words */
+  --color-es-removed: #aa0000;
+  /* JavaScript Objects, Properties, and Methods */
+  --color-o-p-m: #aa00aa;
+  /* Java Reserved Words */
+  --color-java: #aaaa00;
+  /* Other Reserved Words */
+  --color-other: #0000aa;
+  /* HTML Reserved Words */
+  --color-html: #777777;
+  /* Additional Variables */
+  --container-max-width: 1400px;
+  --header-height: 5rem;
+  --main-margin: 2rem 0;
+  --footer-height: 3rem;
+  --title-font-size: 2.5rem;
+  --title-padding: 2rem;
+  --words-list-padding: 0 2rem;
+  --words-item-font-size: 0.8rem;
+  --words-item-width: 20%;
+  --words-item-height: 1rem;
+  --words-item-margin: 0.05rem 0;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  display: block;
+  font-family: "Roboto", sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--color-page);
+  background-color: var(--color-background-page);
+}
+
+.header,
+.main,
+.footer {
+  display: block;
+  width: inherit;
+  height: 100%;
+}
+
+.header {
+  height: var(--header-height);
+}
+
+/*
+.burger {
+  display: flex;
+}
+*/
+/*
+.night-mode {
+  display: block;
+}
+*/
+
+.main {
+  margin: var(--main-margin);
+}
+.footer {
+  height: var(--footer-height);
+}
+
+.container {
+  display: flex;
+  max-width: var(--container-max-width);
+  height: inherit;
+  margin: 0 auto;
+}
+
+.container-header {
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container-main {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: var(--title-font-size);
+  padding: var(--title-padding);
+  color: inherit;
+}
+
+.words-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  width: 100%;
+  height: 100%;
+  padding: var(--words-list-padding);
+}
+
+.words-item {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--words-item-font-size);
+  width: var(--words-item-width);
+  height: var(--words-item-height);
+  margin: var(--words-item-margin);
+}
+
+/* JavaScript Reserved Words */
+.es1 {
+  color: var(--color-page);
+}
+/* Words are new in ECMAScript 5 and 6 */
+.es5 {
+  color: var(--color-es5);
+}
+/* Removed Reserved Words */
+.es-removed {
+  color: var(--color-es-removed);
+}
+/* JavaScript Objects, Properties, and Methods */
+.o-p-m {
+  color: var(--color-o-p-m);
+}
+/* Java Reserved Words */
+.java {
+  color: var(--color-java);
+}
+/* Other Reserved Words */
+.other {
+  color: var(--color-other);
+}
+/* HTML Reserved Words */
+.html {
+  color: var(--color-html);
+}
+
+@media (max-width: 1200px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  .words-item {
+    width: 25%;
+    height: 1.5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .title {
+    display: none;
+  }
+  .words-item {
+    width: 50%;
+  }
+}
+
+@media (max-width: 320px) {
+  .words-item {
+    width: 100%;
+  }
+}
